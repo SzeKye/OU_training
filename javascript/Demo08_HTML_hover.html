@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Demo!</title>
+
+    <style>
+        body{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #fefae0;
+            padding: 20px;
+        }
+
+        h2{
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        h2:hover{
+            color: #ff6347; /* Tomato color on hover */
+        }
+
+        img{
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover{
+            transform: scale(1.1); /* Slightly enlarge the image on hover  1.1 would be 10% bigger */
+        }
+    </style>
+</head>
+<body>
+    <h2>Hover Over this text!</h2>
+    <p>Watch the color change!</p>
+    <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6" alt="Cool cat">
+
+</body>
+</html>
