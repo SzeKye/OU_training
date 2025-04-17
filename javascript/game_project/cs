@@ -1,0 +1,77 @@
+
+// Select elements from the HTML page using their IDs
+const circle = document.getElementById("circle");
+const scoreDisplay = document.getElementById("score");
+const timeDisplay = document.getElementById("time");
+const startBtn = document.getElementById("start-btn");
+
+let score = 0;         // Keep track of user score
+let timeLeft = 10;     // Countdown time in seconds
+let timer;             // To store the interval timer
+let gameRunning = false; // To track if the game is active
+
+// Function to move the circle to a random location in the game area
+function moveCircle() {
+  const gameArea = document.getElementById("game-area");
+
+  // Calculate the max position based on container and circle size
+  const maxX = gameArea.clientWidth - circle.clientWidth;
+  const maxY = gameArea.clientHeight - circle.clientHeight;
+
+  // Generate random positions within bounds
+  const randX = Math.floor(Math.random() * maxX);
+  const randY = Math.floor(Math.random() * maxY);
+
+  // Move the circle to the new random position
+  circle.style.left = `${randX}px`;
+  circle.style.top = `${randY}px`;
+}
+
+// Function to start the game
+function startGame() {
+  // Reset everything
+  score = 0;
+  timeLeft = 10;
+  gameRunning = true;
+
+  // Update the score and time displays
+  scoreDisplay.textContent = score;
+  timeDisplay.textContent = timeLeft;
+
+  // Show the circle and place it randomly
+  circle.style.display = "block";
+  moveCircle();
+
+  // Start the countdown timer
+  timer = setInterval(() => {
+    timeLeft--; // Decrease time
+    timeDisplay.textContent = timeLeft;
+
+    // End the game when time runs out
+    if (timeLeft <= 0) {
+      endGame();
+    } else {
+      moveCircle(); // Move the circle every second
+    }
+  }, 1000); // 1 second intervals
+}
+
+// Function to end the game
+function endGame() {
+  gameRunning = false;               // Mark game as stopped
+  clearInterval(timer);             // Stop the timer
+  circle.style.display = "none";    // Hide the circle
+  alert("Time's up! Your score: " + score); // Show result
+}
+
+// When the user clicks the circle
+circle.addEventListener("click", () => {
+  if (gameRunning) {
+    score++;                         // Increase score
+    scoreDisplay.textContent = score;
+    moveCircle();                    // Move the circle to new position
+  }
+});
+
+// Start button starts the game
+startBtn.addEventListener("click", startGame);

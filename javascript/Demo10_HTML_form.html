@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fun HTML Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #fef9f5; padding: 30px; text-align: center; color: #333;">
+
+    <h2 style="color: #ff6f61;">🌟 Join the Fun Club!</h2>
+    <p style="font-size: 18px;">Fill out the form below to become a member of our fun club!</p>
+    
+    <form action="submit_form.php" method="post" style="background-color: #fff; padding: 20px; border-radius: 10px; margin: 0 auto; width:350px">
+        <!-- text box Name-->
+        <label for="name" style="font-size: 18px;">Your Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Type your name" style="padding: 8px; width: 90%; border-radius: 5px; border: 1px solid #ccc;"><br><br>
+
+        <!-- text box Email-->
+        <label for="email" style="font-size: 18px;">Your Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Type your email" required style="padding: 8px; width: 90%; border-radius: 5px; border: 1px solid #ccc;"><br><br>
+
+        <!--Color Picker Favourite Color-->
+        <label for="color" style="font-size: 18px;">Favorite Color:</label><br>
+        <input type="color" id="color" name="color" value="#ff6f61" style="margin: 10px; width: 50px; border-radius: 5px; border: 1px solid #ccc;"><br><br>
+
+        <!--Fun Level-->
+        <label for="fun_level" style="font-size: 18px;">Fun Level (1-10):</label><br>
+        <input type="range" id="fun_level" name="fun" min="1" max="10" style="margin: 10px;"><br><br>
+
+        <!--Checkbox Hobbies-->
+        <label for="" style="color: #6a4c93;">Choose your hobbies</label><br>
+        <input type="checkbox" id="Dancing" name="hobby" value="Dancing" style="margin: 10px;">
+        <label for="Dancing" style="font-size: 18px;">Dancing</label><br>
+        <input type="checkbox" id="Singing" name="hobby" value="Singing" style="margin: 10px;">
+        <label for="Singing" style="font-size: 18px;">Singing</label><br>
+        <input type="checkbox" id="Gaming" name="hobby" value="Gaming" style="margin: 10px;">
+        <label for="Gaming" style="font-size: 18px;">Gaming</label><br><br>
+
+
+        <!--Radio Button Membership Type-->
+        <label for="" style="color: #6a4c93;">Pick Your Membership Type:</label><br>
+        <input type="radio" id="Free" name="membership" value="Free" style="margin: 10px;">
+        <label for="basic" style="font-size: 18px;">Basic</label><br>
+        
+        <input type="radio" id="Premium" name="membership" value="Premium" style="margin: 10px;">
+        <label for="basic" style="font-size: 18px;">Premium</label><br>
+        
+        <input type="radio" id="VIP" name="membership" value="VIP" style="margin: 10px;">
+        <label for="basic" style="font-size: 18px;">VIP</label><br>
+
+        <!--Submit Button-->
+        <input type="submit" value="Join Now!" style="background-color: #ff6f61; color: white; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer;">
+    </form>
+    
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+/* ===== Page Layout and Font ===== */
+body {
+    font-family: 'Arial', sans-serif;       /* Sets the main font */
+    background-color: #fef9f5;              /* Light background color */
+    text-align: center;                     /* Center-aligns all text */
+    padding: 30px;                          /* Adds spacing around the content */
+    color: #333;                            /* Dark grey text color */
+	width: 350px;
+	margin: 0 auto;
+}
+
+/* ===== Heading Styling ===== */
+h2 {
+    color: #ff6f61;                         /* Coral color for the heading */
+}
+
+/* ===== Form Container Styling ===== */
+form {
+    background-color: #ffffff;              /* White form background */
+    padding: 25px;                          /* Padding inside the form */
+    width: 350px;                           /* Fixed form width */
+    margin: 0 auto;                         /* Center the form on the page */
+    border-radius: 12px;                    /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);  /* Light shadow around the form */
+}
+
+/* ===== Label Styling ===== */
+label {
+    display: block;                         /* Makes label appear on its own line */
+    margin-top: 15px;                       /* Space above each label */
+    text-align: left;                       /* Align labels to the left */
+}
+
+
+/* ===== Input Field Styling ===== */
+input[type="text"],
+input[type="email"],
+input[type="range"] {
+    width: 100%;                            /* Full width of the form */
+    padding: 8px;                           /* Padding inside input fields */
+    margin-top: 5px;                        /* Space above each input */
+    border: 1px solid #ccc;                 /* Light grey border */
+    border-radius: 6px;                     /* Rounded input corners */
+    box-sizing: border-box;                /* Includes padding and border in width */
+}
+
+/* ===== Group Styling for Checkboxes and Radios ===== */
+.checkbox-group, .radio-group {
+    text-align: left;                       /* Aligns checkbox and radio items to the left */
+    margin-top: 10px;                       /* Space above groups */
+}
+
+/* ===== Individual Checkbox and Radio Label Styling ===== */
+.checkbox-group label,
+.radio-group label {
+    display: block;                         /* Places each option on a new line */
+    margin-left: 10px;                      /* Slight indent */
+    margin-top: 5px;                        /* Space between options */
+}
+
+/* ===== Button Styling ===== */
+button {
+    margin-top: 20px;                       /* Space above the button */
+    padding: 10px 20px;                     /* Button padding */
+    background-color: #6a4c93;             /* Purple background */
+    color: white;                           /* White text */
+    border: none;                           /* No border */
+    border-radius: 6px;                     /* Rounded corners */
+    cursor: pointer;                        /* Cursor becomes a pointer on hover */
+    font-size: 16px;                        /* Font size for button text */
+}
+
+#output{
+    margin-top: 20px;                       /* Space above the output area */
+    padding: 10px;                          /* Padding inside the output area */
+    background-color: #f0f0f0;              /* Light grey background for output */
+    border-radius: 6px;                     /* Rounded corners for output area */
+    border: 1px solid #ccc;                 /* Light grey border around output area */
+    text-align: left;                       /* Aligns text to the left in the output area */
+    font-size: 14px;                        /* Font size for output text */
+}

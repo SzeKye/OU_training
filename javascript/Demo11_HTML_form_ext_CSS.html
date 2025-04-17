@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fun Club Form</title>
+    <link rel="stylesheet" href="my_style.css">
+</head>
+<body>
+
+    <h2>🎉 Join the Fun Club!</h2>
+
+    <form>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Type your name">
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Type your email">
+
+    
+        <label for="color">Favorite Color:</label><br>
+        <input type="color" id="color" name="color" style="margin: 10px; width:20% "><br><br>
+
+        <label for="fun-level">Fun Level (1–10):</label>
+        <input type="range" id="fun-level" name="fun" min="1" max="10">
+
+        <label>Choose Your Hobbies:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="hobby" value="Music"> Music</label>
+            <label><input type="checkbox" name="hobby" value="Reading"> Reading</label>
+            <label><input type="checkbox" name="hobby" value="Gaming"> Gaming</label>
+        </div>
+
+        <label>Pick Your Membership:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="membership" value="Free"> Free</label>
+            <label><input type="radio" name="membership" value="Premium"> Premium</label>
+            <label><input type="radio" name="membership" value="VIP"> VIP</label>
+        </div>
+
+        <button type="submit">Submit 😄</button>
+    </form>
+
+</body>
+</html>

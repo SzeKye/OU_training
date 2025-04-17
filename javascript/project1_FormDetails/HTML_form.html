@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fun HTML Form</title>
+	
+	<script src="detailScript.js"></script>
+	
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #fef9f5; padding: 30px; text-align: center; color: #333;">
+
+    <h2 style="color: #ff6f61;">🌟 Join the Fun Club!</h2>
+	
+  <form onsubmit="showFormData(event)" style="background-color: #ffffff; padding: 30px; width: 350px; margin: 0 auto;">
+	
+	<!-- text box Name -->
+	<label>Your Name: </label><br>
+  <input type="text" id="name" name="name" placeholder="Type your name" 
+               style="padding: 8px; width: 90%;  border: 1px solid #ccc;"><br><br>
+	
+	<!-- text box Email -->
+	<label>Your Email: </label><br>
+	 <input type="email" id="email" name="email" placeholder="Type your email"
+                style="padding: 8px; width: 90%;  border: 1px solid #ccc;"><br><br>
+	
+	<!-- Color Picker Favorite color -->
+	<label>Favorite color: </label><br>
+  <input type="color" id="color" name="color" style="margin: 10px;"><br><br>
+	
+	<!-- Fun Level -->
+	<label>Fun Level (1-10): </label><br>
+	<input type="range" id="fun-level"  name="fun" min="1" max="10" style="margin: 10px;"><br><br>
+	
+	<!-- Checkbox Hobbies -->
+	<label style="color: #6a4c93;">Choose Your Hobbies:</label><br>
+	<input type="checkbox" id="music"  name="hobby" value="music">
+	<label>Listening to Music</label><br>
+	
+	<input type="checkbox" id="reading"  name="hobby" value="reading">
+	<label>Reading Books</label><br>
+	
+	<input type="checkbox" id="gaming"  name="hobby" value="gaming">
+	<label>Gaming</label><br><br>
+	
+	
+	<!-- Radio Button Membership Type -->
+	<label style="color: #6a4c93;">Pick Your Membership Type:</label><br>
+	<input type="radio" id="free"  name="membership" value="free">
+	<label>Free</label><br>
+	
+	<input type="radio" id="premium"  name="membership" value="premium">
+	<label>Premium</label><br>
+	
+	<input type="radio" id="vip"  name="membership" value="vip">
+	<label>VIP</label><br><br>
+	
+	
+	
+	<!-- Submit Button -->
+	 <input type="submit" value="Submit & Smile 😄" 
+               style="padding: 10px 20px; background-color: #6a4c93; color: white; border: none; cursor: pointer;">
+	
+	
+	</form>
+	
+	
+    <!-- Display Submitted Info -->
+    <div id="outputbox" style="margin-top: 30px; background-color: #ffffff; width: 350px; margin: 20px auto; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <!-- Filled by JavaScript -->
+    </div>
+
+</body>
+</html>
