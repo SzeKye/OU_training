@@ -1,4 +1,12 @@
-  cd /
+what is operating system
+os is the software that sits on top of the hardware that manages resources, memory, processes
+interface between the user and the hardware
+- different types of os
+features of os
+multitasking, multi user, device management, allows the user and hardware to communicate.
+only 3 types of files in Linux: regular file (-), directory file (d), special file (l,b,s)
+
+cd /
  pwd
  ls
  cd bin
