@@ -1,0 +1,522 @@
+  cd /
+ pwd
+ ls
+ cd bin
+ ls
+ man ls
+ pwd
+ cd ../
+ pwd
+ mkdir newdir
+ pwd
+ cd newdir
+ clear
+ whoami
+ uname
+ uname -a
+ date
+ history
+ clear
+ uname --help
+ cal 12 2025
+ cal 2025
+ ls
+ pwd
+ cd
+ pwd
+ whoami
+ cd lab
+ ## to bring back to home directory cd cmd only
+ history
+ ls
+ ls -l ##long listing of files
+ ls -l dante
+ clear
+ pwd
+ ls
+ ls dante
+ ls -l dante
+ date ; unme
+ date ; uname ##can enter multiple cmds on the single cmd line using semicolon(;)
+ ls -l dante; ls -l dante_1
+ man man
+ ## search by section number or search by keyword in the manual
+ man man
+ man 5 passwd
+ cat /etc/passwd
+ man -k
+ man -k calender
+ man -k calendar
+ man man
+ man -K calender
+ man -K date
+ ## working with files and directories
+ ## view directories
+ ## name(identify and access directory), number(inode where the metadata about dir is stored)
+ ls -l
+ ##inode number is a list of information about a particular object file, directory, special number
+ df -i
+ pwd
+ ls
+ ls dir1
+ cd /
+ pwd
+ ls /home/oracle/lab/dir2
+ ls -l /home/oracle/lab/dir2
+ ls -ld /home/oracle/lab/dir2
+ ##display the directory content with options
+ ls -l
+ pwd
+ cd
+ cd lab
+ ## -a shows hidden files
+ ls -i
+ ls -li
+ ## ls -i list hte files and directories inode number and its corresponding name
+ ls -ld dir3
+ history
+ ls -R dir1
+ # ls -R displays the content of a directory and all its subdirectories
+ ## recursive list
+ clear
+ ls -F
+ ## * executable file
+ ## / directory
+ ## @ symbolic links
+ ## ls -F display the type of the file
+ file dante
+ file /etc/passwd
+ file /usr/bin/passwd
+ ##ELF is exceutable and extensible
+ clear
+ ###changing directories
+ pwd
+ cd ..
+ pwd
+ cd lab/dir1
+ pwd
+ ##cd cmd is a bash built-in cmd
+ pwd
+ ## relative path --path relevant to the current working directory
+ ## absolute path name -- path that stars from root
+ cd /
+ pwd
+ cd /home/oracle/lab/dir1
+ pwd
+ cd ..
+ pwd
+ ## return to your home directory
+ ## cd ~ or cd
+ cd /
+ pwd
+ ls
+ cd home
+ ls
+ cd demo1
+ ls
+ cd ..
+ ls
+ cd ~oracle
+ ## bring me to home directory of oracle user
+ cd ~demo1
+ clear
+ ## view file contents
+ ## cat, more , less, tail, head, wc,diff
+ pwd
+ cd ..
+ cd
+ pwd
+ ls
+ cd lab
+ pwd
+ ls
+ cat dante
+ cat dante_1
+ cat dante dante_1>newfile ##write content from dante and dante_1 into the newfile
+ cat newfile
+ head -5 dante #view the top5 rows from dante
+ head -5 /usr/share/dict/words
+ tail -5 dante ##shows the last 5 rows of dante opp of head
+ tail -5 /usr/share/dict/words
+ wc dante
+ wv -l dante #lines only
+ wc -l dante #lines only
+ wc -w dante
+ ## words only
+ wc -m dante ## characters only
+ cp dante dantecopy
+ ## copy content of dante into dantecopy
+ cat dantecopy
+ cat >> dantecopy
+ ## ctrl d is to save and exit
+ cat dantecopy
+ clear
+ ## copying files and directories
+ ## copy cmd copies single or multiple files and directories
+ cd~/lab
+ cd ~/lab
+ ls
+ pwd
+ ls cp
+ man cp
+ cp file1 file2 /home/oracle/lab/dir1
+ ls dir1
+ cd /
+ pwd
+ cp /home/oracle/lab/file1 /home/oracle/lab/dir3
+ ls /home/oracle/lab/dir3
+ cp /home/oracle/lab/file2 /home/oracle/lab/file3 /home/oracle/lab/dir3
+ ls /home/oracle/lab/dir3
+ ## recommended: -i option -interactive, shows again what you are copying; prevent overwrite and there is no undo in this environment
+ cp -i /home/oracle/lab/file2 /home/oracle/lab/file3 /home/oracle/lab/dir3
+ clear
+ ls
+ pwd
+ cd
+ ls
+ pwd
+ cd lab
+ ls -R dir1
+ cd ..
+ pwd
+ ls
+ ls -R newdir
+ cp -R /lab/dir1 /newdir
+ cd lab
+ cp -R /dir1 /newdir
+ ls
+ cp -R dir1 /newdir
+ mkdir /temp
+ pwd
+ cd -r dir1 dir10
+ ls -ld dir10
+ cd ~/lab
+ ls
+ ls -ld dir10
+ cd -r dir1 dir10
+ cp -r dir1 dir10
+ ls -ld dir10
+ ld -R dir10
+ lw -R dir10
+ ls -R dir10
+ ## if target dir does not exist cp -r command can create a new sub dir and write the contents
+ cp -i dante dantecopy
+ pwd
+ cp -i dante dantycopy
+ ls
+ cp -i dante danteycopy
+ ## -i option prevents existing files from being overwritten by new files
+ cp -R dir1 /temp
+ ls -R dir2
+ ls -R dir3
+ cp -R dir3 temp
+ ls -R temp
+ cd temp
+ cp -i file1 file2
+ ## moving and renaming files and directories
+ pwd
+ cd ..
+ mv dantecopy/tmp
+ mv dantecopy /tmp
+ ls
+ mv danteycopy dantecopy1
+ ls
+ cd dir10
+ ls
+ cd ..
+ mv -r dir10 /tmp/dir11
+ mv -R dir10 /tmp/dir11
+ mv dir10 /tmp/dir11
+ cd /tmp
+ ls
+ cd dir11
+ ls
+ pwd
+ cd ~/lab
+ ls
+ cd temp
+ ls
+ cd /
+ ls
+ cd tmp
+ ls
+ history
+ id
+ pwd
+ cd ; pwd;
+ ls
+ ls -a
+ ls -l
+ ls -F
+ cd lab/dir1
+ pwd
+ ls -l
+ cd coffees
+ pwd
+ cd ../../dir3/planets
+ cd; pwd;
+ ls
+ cd lab
+ mkdir test1
+ cd test1
+ touch file1
+ cat >file2
+ vi file3
+ pwd
+ cd lab
+ ls
+ cd test1
+ ls
+ cd
+ pwd
+ cd ../../etc
+ pwd
+ cd pwd
+ cd ; pwd
+ cd lab
+ cat -n fruit
+ ##displays the contents of fruit file with line no.
+ cat fruit fruit2
+ head -5 /usr/share/dict/words
+ pwd
+ cd
+ pwd
+ vim testvi
+ cat testvi
+ cd lab
+ ls
+ cat tutor.vi
+ clear
+ which vimtutor ##always tells you where it is loaded
+ which vi
+ cd /usr/bin/
+ ls vim
+ cd
+ cd lab
+ vi test1
+ pwd
+ cd lab
+ pwd
+ ls
+ cd test1
+ ls
+ vim test1
+ cd..
+ cd ..
+ vim test1
+ cd test1
+ ls
+ cat test1
+ echo #SHELL
+ echo $shell
+ echo $SHELL
+ ## Brace expansion, tilda expansion, parameter expansion, command substitution, path name expansion or file name generation
+ echo a{b,c,d,e}f #brace expansion
+ echo {3..7}
+ cd ~
+ ## tilda expansion
+ cd ~/lab/dir3
+ pwd
+ ## parameter expansion
+ ## ($) symbol
+ echo $user
+ echo $USER
+ ECHO $HOME
+ echo $HOME
+ ##everything after $ must capitalise
+ clear
+ ## command substitution
+ which passwd
+ which shadow
+ ls -l `which passwd`
+ ls
+ cd ..
+ pwd
+ ls d*
+ ## * expansion
+ ls f*
+ ls [d-f]*
+ env
+ echo $SHELL
+ pwd
+ cd lab/Documents
+ cd lab
+ ls
+ cd Documents
+ cd ~
+ cd /tmp
+ pwd
+ cd -
+ cd
+ cd ~/lab
+ ls *2
+ ls file?
+ ls [m-z]*
+ cd
+ pwd
+ ls > dir-list
+ ls
+ cat -n dir-list
+ cd dir-list
+ man cat
+ rm dir-list
+ ls
+ pwd
+ touch lab/error
+ ls/var/test1 > lab/error 
+ ls/var/test1 > lab/error 2&1
+ ls /var /test1> lab/error 2>&1
+ cat lab/error
+ rm lab/error
+ ls lab/error
+ ls -F /etc | grep "/"
+ clear
+ ##how many commands can history show me
+ echo $HISTSIZE
+ pwd
+ cd ..
+ ls
+ cd
+ ls
+ ls -a
+ cat .bashrc
+ cat /etc/profile
+ cat /etc/profile.d
+ cat .bashrc
+ ls
+ c
+ clear
+ history
+ ## ls -l and ls -n displays the ownership of the files and directories and their corresponding permissions
+ ## every file will have an associated username and user identification
+ ## UID and GID
+ id
+ ##how to change ownership of any particular file
+ ls -l dante
+ chown root: root dante
+ ##chown is change ownership of the file
+ ## system admin can change any file ownership
+ ## chgrp -- changing group ownership
+ ## to change permissions chmod
+ ## only executable files will have execute permission
+ ## ordinary files -rw-rw-rw- =666
+ ## executable files -rwxrwxrwx = 777
+ touch file100
+ ls -l file100
+ pwd
+ ls
+ ls -l testvi
+ umask
+ ## 666-002 = 664 this defines the original permissions of a created file. umask is et to 002
+ ## umask is a bash shell bilt-in command
+ ##permissions automatically assigned
+ umask 222 #changing the umask value
+ touch file101
+ ls -l file101
+ ##umask utility affects the default permissions
+ umask 020
+ touch file102
+ ls -l file102
+ ###default in oracle linux is 002
+ umask 200
+ touch file103
+ ls -l file103
+ umask 111
+ touch file 104
+ ls -l file104
+ ls -l file 104
+ rm 104
+ rm file
+ ls
+ touch file104
+ ls -l file104
+ cat /etc/profile
+ #umask value set now is temporary, to permanently change, change via bashrc
+ ls -l
+ ls -l file100
+ chmod 777 file100
+ ls -l file100
+ chmod 654 file100
+ ls -l file100
+ chmod 640 file100
+ ls -l file100
+ chmod 644 file100
+ ##we can modify the permissions for each category of users by combining the octal numbers
+ ls -l file100
+ chmod 44 file100
+ ls -l file100
+ cd
+ pwd
+ ls -ld lab/Documents
+ ls -l lab/Documents
+ su -
+ umask 0022
+ cd ~/lab
+ mkdir perm
+ cd /etc
+ cd ..
+ ls
+ cd /etc
+ ls -l group motd, shadow, fstab
+ ls -l group motd shadow fstab
+ cp group motd shadow fstab ~/lab/perm
+ pwd
+ cd ~/lab
+ ls -l perm
+ cp -r /etc/skel perm
+ ls -l perm
+ chmod 644 group
+ pwd
+ cd perm
+ chmod 644 group
+ chmod 644 skel
+ chmod 755 skel
+ chmod 644 motd
+ chmod 644 fstab
+ ## A process known as task which , running form of a program or a shell script
+ ps
+ ## subsystem of process --DiskI/O, network, memory, cpu
+ ## boot the system - execute a command or start an application, the system will activate one or more processes
+ history
+ ps -e
+ #all running process in the environemt ps -e
+ ps -l
+ top
+ ps -ef
+ history > history_for_print.txt
+ pstree
+ ps -ef | less
+ CopyHistory
+ Copy History
+ copy history
+ history
+ cp ~/.bash_history /tmp
+ ls
+ cd
+ ls
+ cd tmp
+ cd /
+ ls
+ cd tmp
+ ls
+ cd
+ pwd
+ ls
+ cd lab
+ ls
+ cat hello.sh
+ cat hello.sh szekye
+ chmod 777 hell.sh
+ chmod 777 hello.sh
+ ./hello.sh
+ ./hello.sh hello world
+ cat hello.sh
+ cat leaptest.sh
+ ls leaptest.sh
+ ls -l leaptest.sh
+ chmod u+x leaptest.sh
+ chmod ugo+x leaptest.sh
+ ls-l leaptest.sh
+ ls -l leaptest.sh
+ ./leaptest.sh
+ ./leaptest.sh 2018
